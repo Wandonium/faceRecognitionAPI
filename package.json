@@ -1,0 +1,22 @@
+{
+  "name": "face_reco_api",
+  "version": "1.0.0",
+  "description": "Server api for face_recognition_brain",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Wandonium",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "pg": "^7.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
