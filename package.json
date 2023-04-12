@@ -4,7 +4,8 @@
   "description": "Server api for face_recognition_brain",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "go" : "nodemon server.js"
   },
   "author": "Wandonium",
   "license": "ISC",
