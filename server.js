@@ -18,9 +18,26 @@ const db = knex({
   client: 'pg',
   connection: {
     connectionString : process.env.DATABASE_URL,
-   	ssl: false
+   	ssl: true
   }
 });
+
+const { Pool } = require('pg');
+const itemsPool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+
+itemsPool.query("SELECT 1").then(() => {
+  console.log("PostgreSQL connected");
+})
+.catch((e) => {
+  console.log("PostgreSQL not connected");
+  console.error(e);
+});
+
 
 const app = express();
 app.use(bodyParser.json());

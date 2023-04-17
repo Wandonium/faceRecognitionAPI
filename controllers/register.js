@@ -1,6 +1,7 @@
 
 const handleRegister = (req, res, db, bcrypt) => {
 	const { email, name, password } = req.body;
+	console.log("handleRegister request body: ", req.body);
 	if(!email || !name || !password) {
 		return res.status(400).json('incorrect form submission...');
 	}
@@ -14,6 +15,7 @@ const handleRegister = (req, res, db, bcrypt) => {
 		.into('login')
 		.returning('email')
 		.then(loginEmail => {
+			console.log("insert into login table response: ", loginEmail);
 			return trx('users')
 			.returning('*')
 			.insert({
