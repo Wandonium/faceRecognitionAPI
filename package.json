@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "go" : "nodemon server.js"
+    "go": "nodemon server.js"
   },
   "author": "Wandonium",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "body-parser": "^1.18.3",
     "clarifai": "^2.9.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.16.4",
     "knex": "^0.16.3",
     "pg": "^7.8.1"
